@@ -1,1 +1,48 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "PressStart2P-Regular", serif;
+  --main-font-weight: 400;
+  --header-font-weight: 700;
+  --bg-color: #fff;
+  --bg-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --text-color: #000;
+  --mix-text-color: #fff;
+  --border-color: #000;
+  --hover-color: rgb(0 0 0 / 0.6);
+  --stroke-color: #fff;
+  --contur-color: #000;
+  --filling-color: #f00;
+}
+
+@media (width >= 768px) {
+  .page {
+    padding: 0 25.7vi;
+  }
+
+  .page .save-button {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding: 15px 19px 15px 21px;
+  }
+
+  .page .floppy {
+    width: 22px;
+    height: 22px;
+  }
+}
