@@ -21,16 +21,6 @@
   }
 }
 
-@keyframes butt {
-  from {
-    translate: -100% 0%;
-  }
-
-  to {
-    translate: 0% 0%;
-  }
-}
-
 @keyframes icon-heart {
   from {
     scale: 1;

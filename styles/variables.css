@@ -34,6 +34,11 @@
     padding: 0 25.7vi;
   }
 
+  .page .lable {
+    inset-block-start: 28px;
+    inset-inline-end: 25px;
+  }
+
   .page .save-button {
     display: flex;
     flex-direction: row;

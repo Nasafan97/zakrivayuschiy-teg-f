@@ -14,9 +14,9 @@
 */
 
 .page {
-  color: var(--text-color);
-  font-family: var(--main-font);
-  background-color: var(--bg-color);
+  color: var(--text-color), #000;
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--bg-color), #fff;
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
@@ -32,23 +32,23 @@
   min-height: 327px;
   margin: 100px 0;
   border: 2px solid var(--border-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   text-transform: uppercase;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color), #fff;
 }
 
-.header__title {
-  padding-block-start: clamp(120px, 27%, 136px);
+.header__logo {
+  padding-block-start: clamp(120px, 27%, 134px);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__subtitle {
+.header__title {
   padding: 20px 0 25px 0;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu {
-  padding-block-end: 25px;
+  padding-block-end: 20px;
 }
 
 .theme-menu__list {
@@ -68,7 +68,7 @@
 }
 
 .theme-menu__button:disabled {
-  color: var(--hover-color);
+  color: var(--hover-color), rgb(0 0 0 / 0.6);
   transition: color 0.3s ease;
   pointer-events: none;
 }
@@ -77,7 +77,7 @@
   content: "▶";
   position: absolute;
   left: -17px;
-  color: var(--hover-color);
+  color: var(--hover-color), rgb(0 0 0 / 0.6);
   animation-name: pointer;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -89,19 +89,19 @@
   content: "";
   display: block;
   height: 2px;
-  background-color: var(--hover-color);
+  background-color: var(--hover-color), rgb(0 0 0 / 0.6);
   transition: scale 0.3s;
   transform-origin: 0;
   scale: 0;
 }
 
 .theme-menu__button:focus-visible {
-  color: var(--hover-color);
+  color: var(--hover-color), rgb(0 0 0 / 0.6);
   transition: color 0.3s ease;
 }
 
 .theme-menu__button:hover {
-  color: var(--hover-color);
+  color: var(--hover-color), rgb(0 0 0 / 0.6);
   transition: color 0.3s ease;
   cursor: pointer;
 }
@@ -118,8 +118,8 @@
 
 .content__section {
   border: 2px solid var(--border-color);
-  font-family: var(--main-font);
-  background-color: var(--bg-color);
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--bg-color), #fff;
 }
 
 .content__section-header {
@@ -137,7 +137,7 @@
   position: absolute;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--stroke-color), 0 1px var(--stroke-color),
@@ -205,7 +205,7 @@
   line-height: 21px;
 }
 
-p:not(:last-of-type) {
+.indent {
   margin-block-end: 27px;
 }
 
@@ -234,19 +234,20 @@ p:not(:last-of-type) {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--border-color);
+  background-color: var(--border-color), #000;
+  transition: translate 0.5s ease-in-out;
   translate: -100% 0%;
 }
 
 .button:hover::before {
-  animation: butt 0.5s ease-in-out forwards;
+  translate: 0% 0%;
 }
 
 .button {
   position: relative;
   border: 2px solid var(--border-color);
   overflow: hidden;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   font-size: 14px;
   line-height: 90%;
 }
@@ -276,7 +277,7 @@ p:not(:last-of-type) {
   position: relative;
   z-index: 99;
   display: block;
-  color: var(--mix-text-color);
+  color: var(--mix-text-color), #fff;
   mix-blend-mode: difference;
 }
 
@@ -303,37 +304,37 @@ p:not(:last-of-type) {
 }
 
 .like-icon:hover .core {
-  fill: var(--contur-color);
+  fill: var(--contur-color), #000;
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--contur-color);
+  fill: var(--contur-color), #000;
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
-  fill: var(--filling-color);
+  fill: var(--filling-color), #f00;
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  fill: var(--filling-color);
+  fill: var(--filling-color), #f00;
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--filling-color);
+  fill: var(--filling-color), #f00;
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--filling-color);
+  fill: var(--filling-color), #f00;
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--filling-color);
+  fill: var(--filling-color), #f00;
   transition: fill 0.3s 0.06s linear;
 }
 
@@ -358,14 +359,14 @@ p:not(:last-of-type) {
   align-items: center;
   gap: 8px;
   padding: 15px 20.5px 15px 19.5px;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color), #fff;
   background-clip: padding-box;
 }
 
 .floppy {
   width: 29px;
   height: 29px;
-  color: var(--mix-text-color);
+  color: var(--mix-text-color), #fff;
   mix-blend-mode: difference;
 }
 
@@ -379,7 +380,7 @@ p:not(:last-of-type) {
   height: 192px;
   border: 2px solid var(--border-color);
   padding: 30px;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color), #fff;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -401,15 +402,15 @@ p:not(:last-of-type) {
 .floppy-dialog {
   width: 39px;
   height: 39px;
-  color: var(--mix-text-color);
+  color: var(--mix-text-color), #fff;
   mix-blend-mode: difference;
 }
 
 .header-dialog {
   display: block;
   flex: 1;
-  color: var(--mix-text-color);
-  font-family: var(--accent-font);
+  color: var(--mix-text-color), #fff;
+  font-family: var(--accent-font), serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
