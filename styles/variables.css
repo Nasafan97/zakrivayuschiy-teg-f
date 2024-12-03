@@ -50,4 +50,8 @@
     width: 22px;
     height: 22px;
   }
+
+  .page .dialog-save {
+    padding: 30px;
+  }
 }
